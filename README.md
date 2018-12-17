@@ -12,6 +12,7 @@ This is a [Phase 3](https://github.com/Ada-Developers-Academy/pedagogy/blob/mast
 - Remember how Rails works
 - Own both ends of an API
 - Practice project management skills in prioritizing features and determining deliverables
+- Reflect and prepare a short presentation
 
 This project has two main components: a Rails API and a React front-end. You will be extending an existing Rails API to add some of the functionality that you require to complete the front-end implementation. You will be submitting a pull request at the end of the project for both components.
 
@@ -24,6 +25,8 @@ Our rental store employees want to be able to manage their rental inventory. The
 This project will be utilizing an external API within an API! Whoa! Your front-end implementation will be interacting with a **Rails API** that you will be modifying. The Rails API wraps an **external API** which contains many endpoints related to movies. The external API is [The Movie DB](https://www.themoviedb.org/documentation/api).
 
 The requirements for this project are intentionally open-ended. Part of your job is to work with your partner to prioritize them.
+
+Each pair/group will give a short presentation on their project and their learnings to the class at the conclusion of the project.
 
 ## Project Setup
 
@@ -131,6 +134,26 @@ Some of these optional requirements require work in the front-end only, back-end
 - Be able to check in movies from the customer details page
 - Full CRUD for customers
 - Introduce scrolling pagination to dynamically load more movies when scrolling to the bottom (research!!)
+
+## Presentation Requirements
+
+At the conclusion of this project, each group will give a presentation of their project. **Each presentation will last no more than 5 minutes.**
+
+This presentation should be a concise demo of your project and also talking through the following reflection prompts.
+
+Please include the following things in your demo:
+- **ONE** of the following user flows to demo:
+  - Search for a movie and select a movie
+  - I can look at the customers and see a customer
+- Describe the process of this project:
+  - What were some of the challenges and victories of this project?
+  - What is an interesting front-end thing that your team accomplished?
+  - What is an interesting back-end thing that your team accomplished?
+- Reflect on this project in the context of your time at Ada:
+  - How was this project different from the first Video Store API project you worked on?
+  - What is something you observed in this project that you want to take forward with you in order to succeed in your capstone project?
+
+There is no expectation for a slideshow.
 
 ## What we're looking for
 You can see what your instructors are looking for [here](./feedback.md)
