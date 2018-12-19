@@ -41,7 +41,7 @@ Each pair/group will give a short presentation on their project and their learni
 - The other partner shall then:
   - Clone the repository (without forking)
 - Both partners shall then
-- Install dependencies using `npm install`
+  - Install dependencies using `npm install`
   - Start the development server using `npm start`
   - Start the test watcher using `npm test`
 
