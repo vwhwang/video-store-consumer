@@ -32,8 +32,6 @@ Each pair/group will give a short presentation on their project and their learni
 
 ## Project Setup
 
-You will need to cd into the project directory and create a new React app with `create-react-app .`.  
-
 ### 1. React Front-End
 
 - One partner shall:
