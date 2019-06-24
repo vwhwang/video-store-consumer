@@ -58,7 +58,7 @@ Each pair/group will give a short presentation on their project and their learni
 - One person shall fork the API repository. You can find it at your cohort's GitHub org, and the project's name is VideoStoreConsumer-API. You should immediately notice that this is a Rails project not a React project.
 - Add the pair as a collaborator on the project
 - Both people shall clone the repository
-- Set up the `.env` file with the API key from step #2
+- Set up the `.env` file with the API key from step #2 as `MOVIEDB_KEY`.
 - Run `bundle install`, `rails db:setup`, etc
 - Ensure both people can run the API locally
 
