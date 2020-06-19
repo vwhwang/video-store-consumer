@@ -21,7 +21,7 @@ At project submission, we expect more tests/assertions, and 0 skips
 | The App uses React Router (or similar package) to create bookmarkable navigation for their application on the following routes `/`, `/search`, `/library`, `/customers` | ✔️?                                                            |
 | React & the API integrate together via api requests                                                                                                                     | ✔️?                                                            |
 | Both ends of the application are deployed and communicate                                                                                                               | ✔️?                                                            |
-| Be able to attractively style a React App                                                                                                                               | ✔️?                                                            |
+| React App is attractively styled                                                                                                                               | ✔️?                                                            |
 
 
 
@@ -56,4 +56,3 @@ At project submission, we expect more tests/assertions, and 0 skips
 <!-- Instructors, feel free to ignore this section if there's nothing else to add. -->
 
 ## Summary
-
