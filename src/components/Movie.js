@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Movie = (props) => {
 
   const onMovieClick =() => {
-    props.setSelectedMovieCallBack(props.movie);
+    props.onClickCallBack(props.movie);
   }
 
   return <button onClick = {onMovieClick}>
@@ -14,7 +14,7 @@ const Movie = (props) => {
 }
 
 Movie.propTypes = {
-  setSelectedMovieCallBack: PropTypes.func.isRequired,
+  onClickCallBack: PropTypes.func.isRequired,
   movie: PropTypes.object
 };
 

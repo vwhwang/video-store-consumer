@@ -33,7 +33,7 @@ const Search = (props) => {
 
 
   const generateSearches = searchResult.map((search)=> {
-    return <Movie key={search.id} movie={search} />
+    return <Movie key={search.id} movie={search} onClickCallBack={console.log}/>
   })
 
   return <div>
