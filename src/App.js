@@ -46,7 +46,9 @@ class App extends Component {
               </li>
             </ul>
           </nav>
+
           <p> {this.state.selectedMovie.title}</p>
+          
           <Switch>
             <Route exact path="/">
               <h1>This is the home page!</h1>
