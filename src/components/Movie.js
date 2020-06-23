@@ -19,7 +19,6 @@ const Movie = () => {
   };
 
 
-
   listMovies();
 
   return movies.map((movie)=> {
@@ -28,7 +27,6 @@ const Movie = () => {
     </div>
   })
 };
-
 
 
 
