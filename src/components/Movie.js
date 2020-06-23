@@ -1,33 +1,25 @@
-import React, {useState} from 'react';
-const BASE_URL = 'http://localhost:3000/movies/';
-const axios = require('axios');
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const Movie = () => {
+const Movie = (props) => {
 
-  const [movies,setMovie] = useState([]);
+  const onMovieClick =() => {
+    const selectedMovie = {
+      id: props.id,
+      title: props.title
+    }
+    props.onClickCallback(selectedMovie);
+  }
 
-  const listMovies = () => {
-    
-    axios.get(BASE_URL)
-      .then((response)=>{
-        setMovie(response.data);
-      })
-      .catch((error)=>{
-        // ;
-      });
-  
-  };
+  return <button onClick = {onMovieClick}>
+    {props.title}
+  </button>
 
+}
 
-  listMovies();
+Movie.propTypes = {
 
-  return movies.map((movie)=> {
-    return <div>
-      Title: {movie.title}
-    </div>
-  })
+  onClickCallback: PropTypes.func.isRequired
+
 };
-
-
-
-export default Movie;
+export default Movie
