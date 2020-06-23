@@ -6,7 +6,7 @@ const axios = require('axios');
 
 const MovieList = (props) => {
 
-  const [movies,setMovie] = useState([]);
+  const [movies,setMovies] = useState([]);
 
   // CALL RUBY RAILS API 
   useEffect(() => {
@@ -14,20 +14,19 @@ const MovieList = (props) => {
     axios.get(BASE_URL)
 
       .then((response) => {
-        setMovie(response.data);
+        setMovies(response.data);
       });
 
   }, []);
 
-  // Click add movie
 
 
-  const onMovieClick =(movie) => {
-    console.log(movie)
-  }
-  
+  // const onMovieClick =(movie) => {
+  //   console.log(movie)
+  // }
+
   const generateMovies = movies.map((movie)=> {
-      return <Movie id={movie.id} title={movie.title} onClickCallback= {onMovieClick}/>
+      return <Movie key={movie.id} movie={movie} setSelectedMovieCallBack= {props.setSelectedMovieCallBack}/>
     })
 
 
@@ -36,21 +35,12 @@ const MovieList = (props) => {
   </div>
 
 
-
-
-  // return movies.map((movie)=> {
-  //   return <div>
-  //     Title: {movie.title}
-  //     <button >
-  //       Select Movie
-  //     </button>
-  //     </div>
-  // })
-
-
 };
 
 
+MovieList.propTypes = {
+  setSelectedMovieCallBack: PropTypes.func.isRequired,
+};
 
 
 export default MovieList;

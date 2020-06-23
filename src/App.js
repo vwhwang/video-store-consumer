@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component , useState } from 'react';
 import MovieList from './components/MovieList';
-import logo from './logo.svg';
 import './App.css';
 
 import {
@@ -10,9 +9,19 @@ import {
   Link
 } from "react-router-dom";
 
-
-
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedMovie: {},
+    };
+  }
+
+  setSelectedMovie(movie){
+    this.setState({selectedMovie:movie})
+  }
+
   render() {
     return (
       <div className="App">
@@ -37,14 +46,14 @@ class App extends Component {
               </li>
             </ul>
           </nav>
-          
+          <p> {this.state.selectedMovie.title}</p>
           <Switch>
             <Route exact path="/">
               <h1>This is the home page!</h1>
             </Route>
 
             <Route path="/library">
-              <MovieList  />
+              <MovieList setSelectedMovieCallBack = {this.setSelectedMovie.bind(this)} />
             </Route>
 
             <Route path="/search">
@@ -65,5 +74,7 @@ class App extends Component {
     );
   }
 };
+
+
 
 export default App;
