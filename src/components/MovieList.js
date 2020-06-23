@@ -20,11 +20,6 @@ const MovieList = (props) => {
   }, []);
 
 
-
-  // const onMovieClick =(movie) => {
-  //   console.log(movie)
-  // }
-
   const generateMovies = movies.map((movie)=> {
       return <Movie key={movie.id} movie={movie} setSelectedMovieCallBack= {props.setSelectedMovieCallBack}/>
     })

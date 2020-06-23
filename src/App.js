@@ -1,7 +1,7 @@
 import React, { Component , useState } from 'react';
 import MovieList from './components/MovieList';
 import CustomerList from './components/CustomerList';
-
+import Search from './components/Search';
 import './App.css';
 
 import {
@@ -68,7 +68,7 @@ class App extends Component {
             </Route>
 
             <Route path="/search">
-              <h1>/search page</h1>
+              <Search />
             </Route>
 
 
