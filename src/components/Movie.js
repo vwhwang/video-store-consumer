@@ -1,27 +1,35 @@
-
-import React from 'react';
-const axios = require('axios');
+import React, {useState} from 'react';
 const BASE_URL = 'http://localhost:3000/movies/';
-
-
-const listMovies = () => {
-
-  axios.get(BASE_URL)
-    .then((response)=>{
-      console.log("Hi");
-      console.log(response);
-    })
-    .catch((error)=>{
-      // ;
-    });
-};
+const axios = require('axios');
 
 const Movie = () => {
-  const data = listMovies();
-  return <div >
-  {data}
-</div>
+
+  const [movies,setMovie] = useState([]);
+
+  const listMovies = () => {
+    
+    axios.get(BASE_URL)
+      .then((response)=>{
+        setMovie(response.data);
+      })
+      .catch((error)=>{
+        // ;
+      });
+  
+  };
+
+
+
+  listMovies();
+
+  return movies.map((movie)=> {
+    return <div>
+      Title: {movie.title}
+    </div>
+  })
 };
+
+
 
 
 export default Movie;
