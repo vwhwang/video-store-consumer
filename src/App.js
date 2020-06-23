@@ -1,5 +1,7 @@
 import React, { Component , useState } from 'react';
 import MovieList from './components/MovieList';
+import CustomerList from './components/CustomerList';
+
 import './App.css';
 
 import {
@@ -15,11 +17,16 @@ class App extends Component {
     super(props);
     this.state = {
       selectedMovie: {},
+      selectedCustomer: {},
     };
   }
 
   setSelectedMovie(movie){
     this.setState({selectedMovie:movie})
+  }
+
+  setSelectedCustomer(customer){
+    this.setState({selectedCustomer:customer})
   }
 
   render() {
@@ -48,6 +55,8 @@ class App extends Component {
           </nav>
 
           <p> {this.state.selectedMovie.title}</p>
+          <p> {this.state.selectedCustomer.name}</p>
+
           
           <Switch>
             <Route exact path="/">
@@ -64,6 +73,8 @@ class App extends Component {
 
 
             <Route path="/customers">
+            <CustomerList setSelectedCustomerCallBack = {this.setSelectedCustomer.bind(this)} />
+
               <h1>/customers page</h1>
             </Route>
           </Switch>
