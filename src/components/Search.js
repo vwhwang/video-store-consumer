@@ -43,7 +43,7 @@ const Search = (props) => {
             placeholder="Search movie title"
             value={submission.title}/>
       <div >
-          <input type="submit" value="Submit Movie Search" className="PlayerSubmissionForm__submit-btn" />
+          <input type="submit" value="Submit Movie Search" />
       </div>
 
     </form>

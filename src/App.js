@@ -2,6 +2,7 @@ import React, { Component , useState } from 'react';
 import MovieList from './components/MovieList';
 import CustomerList from './components/CustomerList';
 import Search from './components/Search';
+import Checkout from './components/Checkout';
 import './App.css';
 
 import {
@@ -29,6 +30,9 @@ class App extends Component {
     this.setState({selectedCustomer:customer})
   }
 
+
+
+
   render() {
     return (
       <div className="App">
@@ -53,7 +57,8 @@ class App extends Component {
               </li>
             </ul>
           </nav>
-
+          <h6>Checkout Place Holder</h6>
+          <Checkout movie = {this.state.selectedMovie.title} customer = {this.state.selectedCustomer} />
           <p> {this.state.selectedMovie.title}</p>
           <p> {this.state.selectedCustomer.name}</p>
 
