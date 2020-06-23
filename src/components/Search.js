@@ -6,52 +6,41 @@ const axios = require('axios');
 
 const Search = (props) => {
 
-  const [submission,setSubmission] = useState("");
+  const [searchTerm, setSearchTerm] = useState({});
+  const [submission,setSubmission] = useState({});
   const [searchResult, setResult] = useState([]);
 
   const onInputChange = (event) => {
+    console.log(event.target.value);
     const newFormFields = {
-      title:""
+      ...submission
     };
     newFormFields[event.target.name] = event.target.value;
-    setSubmission(newFormFields);
+    setSearchTerm(newFormFields);
   };
 
   const onSubmit =(event) => {
     event.preventDefault();
-    // props.onSubmitCallBack(submission);
-    console.log(event);
-
-    // if(submission.title !== ''){
-    //   setSubmission({
-    //     title:''
-    //   });
-    // };
-
+    setSubmission(searchTerm)
   };
 
-
-
   useEffect(() => {
-
-    axios.get(BASE_URL + "jaw")
-
+    axios.get(BASE_URL + submission.title)
       .then((response) => {
         setResult(response.data);
       });
-
-  }, []);
+  }, [submission.title]);
 
 
   const generateSearches = searchResult.map((search)=> {
-    return <Movie key={search.id} movie={search} setSelectedMovieCallBack= {props.setSelectedMovieCallBack}/>
+    return <Movie key={search.id} movie={search} />
   })
 
   return <div>
     <form onSubmit={onSubmit}>
-      <input type="submit"  onChange={onInputChange}  name="a movie"
+      <input type="text"  onChange={onInputChange} 
+       name="title"
             placeholder="Search movie title"
-            type="text"
             value={submission.title}/>
       <div >
           <input type="submit" value="Submit Movie Search" className="PlayerSubmissionForm__submit-btn" />
@@ -65,3 +54,4 @@ const Search = (props) => {
 }
 
 export default Search;
+
