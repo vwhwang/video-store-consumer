@@ -6,6 +6,8 @@ const axios = require('axios');
 
 const Checkout = (props) => {
 
+  const [CheckoutMessage, setCheckoutMessage] = useState("");
+
   const [CustomerAndMovie,setCustomerAndMovie] = useState({
     movie: '',
     customer: ''
@@ -16,7 +18,7 @@ const Checkout = (props) => {
 
     setCustomerAndMovie({
       movie: props.movie,
-      customer: props.customer
+      customer: props.customer.id
     });
 
   }
@@ -35,7 +37,7 @@ const Checkout = (props) => {
     })
 
       .then((response) => {
-
+        setCheckoutMessage(props.customer.name + " checked out " + CustomerAndMovie.movie +" !" );
         console.log("Successfully Checked Out Movie" + CustomerAndMovie.movie);
       })
       .catch((error)=>{
@@ -49,9 +51,13 @@ const Checkout = (props) => {
 
 
 
-  return <button onClick = {onSubmitCheckout}>
+  return <div>
+    <button onClick = {onSubmitCheckout}>
     Check Out
-  </button>
+    </button>
+    <p>{CheckoutMessage}</p>
+
+   </div>
 }
 
 export default Checkout
