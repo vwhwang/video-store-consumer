@@ -58,8 +58,10 @@ const Search = (props) => {
       </div>
 
     </form>
-    <h4>Results</h4>
-      {generateSearches}
+    {searchResult && (  <h4>Results</h4> )}
+
+    {generateSearches}
+
     <h6>Searched Movie Details:</h6>
     <SearchDetail movie = {searchDetail}/>
     <AddMovie movie ={searchDetail}/>
@@ -68,4 +70,7 @@ const Search = (props) => {
 }
 
 export default Search;
+
+// {  searchResult && (<h4>Results</h4>
+//   {generateSearches})}
 
