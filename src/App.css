@@ -2,41 +2,19 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
 .App-header {
   background-color: #222;
-  height: 150px;
+  height: 100px;
   padding: 20px;
   color: white;
 }
 
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
+/* remove bullets from li elements */
 .App-list-style {
+  display: inline-block;
   list-style: none;
-
+  text-align: left;
 }
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-/* .App-main-nav {
-  padding: 20px;
-  font-size: 20px;
-  background-color: whitesmoke;
-} */
 
 .App-nav-link-container {
   padding-right: 10px;
@@ -45,6 +23,7 @@
   display: inline-block;
 }
 
+/* remove right border from Customers link on nav bar */
 .App-nav-link-container:last-of-type {
   padding-right: 0;
   border-right: none;
@@ -54,8 +33,9 @@
 .App-nav-link {
   color: black;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 20px;
 }
+
 .App-nav-link:not(.active):hover {
   color: purple;
 }

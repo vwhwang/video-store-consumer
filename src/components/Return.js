@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
+import './Return.css';
+
 const BASE_URL = 'http://localhost:3000/rentals/';
 
 const axios = require('axios');
@@ -56,13 +58,13 @@ const Return = (props) => {
 
 
 
-  return <div>
-    <button onClick = {onSubmitReturn}>
+  return <span>
+    <button className="Return-checkIn-checkOut"  onClick = {onSubmitReturn}>
     Return Movie
     </button>
     <p>{ReturnMessage}</p>
 
-   </div>
+   </span>
 }
 
 export default Return

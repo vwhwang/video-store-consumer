@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
+import './Checkout.css';
+
 const BASE_URL = 'http://localhost:3000/rentals/';
 
 const axios = require('axios');
@@ -37,7 +39,7 @@ const Checkout = (props) => {
     })
 
       .then((response) => {
-        setCheckoutMessage(props.customer.name + " checked out " + CustomerAndMovie.movie +" !" + " Due Date " + new_due_date );
+        setCheckoutMessage(props.customer.name + " checked out: " + CustomerAndMovie.movie +"!" + " Due Date " + new_due_date );
         console.log("Successfully Checked Out Movie" + CustomerAndMovie.movie);
       })
       .catch((error)=>{
@@ -51,13 +53,12 @@ const Checkout = (props) => {
 
 
 
-  return <div>
-    <button onClick = {onSubmitCheckout}>
-    Check Out
+  return <span>
+    <button id="leftWrapper" className="Checkout-checkIn-checkOut" onClick = {onSubmitCheckout}>
+    Check Out Movie
     </button>
     <p>{CheckoutMessage}</p>
-
-   </div>
+    </span>
 }
 
 export default Checkout

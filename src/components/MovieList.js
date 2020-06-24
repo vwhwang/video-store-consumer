@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import Movie from './Movie';
+
 const BASE_URL = 'http://localhost:3000/movies/';
 const axios = require('axios');
 

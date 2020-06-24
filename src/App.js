@@ -44,7 +44,7 @@ class App extends Component {
     
         <Router>
           <nav>
-            <ul className="App-list-style">
+            <ul>
               <li className="App-nav-link-container">
                 <Link className="App-nav-link" to="/">Home</Link>
               </li>
@@ -60,7 +60,6 @@ class App extends Component {
             </ul>
           </nav>
 
-          <h6>Checkout Place Holder</h6>
           <Checkout movie = {this.state.selectedMovie.title} customer = {this.state.selectedCustomer} />
           <Return movie = {this.state.selectedMovie.title} customer = {this.state.selectedCustomer} />
           <p> {this.state.selectedMovie.title}</p>
@@ -100,7 +99,7 @@ class App extends Component {
           <img src = {this.state.selectedMovie.image_url} alt="alt"/> */}
         </div>
 
-        <div>
+        <div className="App-list-style-container">
           <h3>Selected Customer</h3>
           <p>Customer: {this.state.selectedCustomer.name}, Registered At: {this.state.selectedCustomer.registered_at}</p>
           <h3>Customer Details:</h3>
