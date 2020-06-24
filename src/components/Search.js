@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Movie from './Movie';
 import AddMovie from './AddMovie';
 import SearchDetail from './SearchDetail';
+import './Search.css'
 const BASE_URL = 'http://localhost:3000/movies?query=';
 const axios = require('axios');
 
@@ -47,7 +48,7 @@ const Search = (props) => {
     return <Movie key={search.id} movie={search} onClickCallBack={onClickDetails}/>
   })
 
-  return <div>
+  return <div className="Search">
     <form onSubmit={onSubmit}>
       <input type="text"  onChange={onInputChange} 
        name="title"
