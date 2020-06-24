@@ -3,6 +3,7 @@ import MovieList from './components/MovieList';
 import CustomerList from './components/CustomerList';
 import Search from './components/Search';
 import Checkout from './components/Checkout';
+import Return from './components/Return';
 import './App.css';
 
 import {
@@ -57,8 +58,10 @@ class App extends Component {
               </li>
             </ul>
           </nav>
+
           <h6>Checkout Place Holder</h6>
-          <Checkout movie = {this.state.selectedMovie.title} customer = {this.state.selectedCustomer.id} />
+          <Checkout movie = {this.state.selectedMovie.title} customer = {this.state.selectedCustomer} />
+          <Return movie = {this.state.selectedMovie.title} customer = {this.state.selectedCustomer} />
           <p> {this.state.selectedMovie.title}</p>
           <p> {this.state.selectedCustomer.name}</p>
 
@@ -87,6 +90,13 @@ class App extends Component {
         </Router>
 
 
+        <div>
+          <h3>Details of Selected Movie from Library</h3>
+          <p>Movie: {this.state.selectedMovie.title}, release date: {this.state.selectedMovie.release_date}</p>
+          <p>Overview: {this.state.selectedMovie.overview}</p>
+          <img src = {this.state.selectedMovie.image_url} alt="alt"/>
+        </div>
+     
        
       </div>
     );
