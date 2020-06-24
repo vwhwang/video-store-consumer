@@ -3,6 +3,7 @@ import MovieList from './components/MovieList';
 import CustomerList from './components/CustomerList';
 import Search from './components/Search';
 import Checkout from './components/Checkout';
+import Return from './components/Return';
 import './App.css';
 
 import {
@@ -60,6 +61,7 @@ class App extends Component {
 
           <h6>Checkout Place Holder</h6>
           <Checkout movie = {this.state.selectedMovie.title} customer = {this.state.selectedCustomer} />
+          <Return movie = {this.state.selectedMovie.title} customer = {this.state.selectedCustomer} />
           <p> {this.state.selectedMovie.title}</p>
           <p> {this.state.selectedCustomer.name}</p>
 
