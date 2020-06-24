@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import Movie from './Movie';
+import SearchDetail from './SearchDetail';
 const BASE_URL = 'http://localhost:3000/movies?query=';
 const axios = require('axios');
 
@@ -36,8 +37,8 @@ const Search = (props) => {
   // show search movie details 
   const [searchDetail, setSearchDetail] = useState([]);
 
-  const onClickDetails = () => {
-    setSearchDetail("hello");
+  const onClickDetails = (movie) => {
+    setSearchDetail(movie);
 
   } 
 
@@ -59,7 +60,8 @@ const Search = (props) => {
     <h4>Results</h4>
       {generateSearches}
     <h6>Searched Movie Details:</h6>
-{searchDetail}
+{/* {searchDetail} */}
+<SearchDetail movie = {searchDetail}/>
 </div>
 
 }

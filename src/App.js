@@ -12,6 +12,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import SearchDetail from './components/SearchDetail';
 
 class App extends Component {
 
@@ -91,10 +92,12 @@ class App extends Component {
 
 
         <div>
-          <h3>Details of Selected Movie from Library</h3>
+          <h3>Selected Movie:</h3>
+          <SearchDetail movie={this.state.selectedMovie}/>
+          {/* <h3>Details of Selected Movie from Library</h3>
           <p>Movie: {this.state.selectedMovie.title}, Release Date: {this.state.selectedMovie.release_date}</p>
           <p>Overview: {this.state.selectedMovie.overview}</p>
-          <img src = {this.state.selectedMovie.image_url} alt="alt"/>
+          <img src = {this.state.selectedMovie.image_url} alt="alt"/> */}
         </div>
 
         <div>
