@@ -69,7 +69,7 @@ class App extends Component {
           
           <Switch>
             <Route exact path="/">
-              <h1>This is the home page!</h1>
+              {/* we can add our photo here */}
             </Route>
 
             <Route path="/library">
@@ -83,8 +83,6 @@ class App extends Component {
 
             <Route path="/customers">
             <CustomerList setSelectedCustomerCallBack = {this.setSelectedCustomer.bind(this)} />
-
-              <h1>/customers page</h1>
             </Route>
           </Switch>
 
@@ -92,14 +90,10 @@ class App extends Component {
 
 
         <div>
-          <h3>Selected Movie:</h3>
           <SearchDetail movie={this.state.selectedMovie}/>
-          {/* <h3>Details of Selected Movie from Library</h3>
-          <p>Movie: {this.state.selectedMovie.title}, Release Date: {this.state.selectedMovie.release_date}</p>
-          <p>Overview: {this.state.selectedMovie.overview}</p>
-          <img src = {this.state.selectedMovie.image_url} alt="alt"/> */}
         </div>
-
+        {/* hide customer */}
+        {this.state.selectedCustomer.name && (
         <div>
           <h3>Selected Customer</h3>
           <p>Customer: {this.state.selectedCustomer.name}, Registered At: {this.state.selectedCustomer.registered_at}</p>
@@ -113,7 +107,8 @@ class App extends Component {
             <li className="App-list-style">Account Credit: {this.state.selectedCustomer.account_credit}</li>
             <li className="App-list-style"li>Movies Checked Out: {this.state.selectedCustomer.movies_checked_out_count}</li>
           </ul>
-        </div>
+        </div>) }
+        
      
        
       </div>
