@@ -5,11 +5,16 @@ const Movie = (props) => {
 
   const onMovieClick =() => {
     props.onClickCallBack(props.movie);
+    console.log(props.movie);
   }
+
+  // display movie details 
 
   return <button onClick = {onMovieClick}>
     {props.movie.title}
   </button>
+
+  
 
 }
 

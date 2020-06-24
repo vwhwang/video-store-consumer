@@ -90,6 +90,13 @@ class App extends Component {
         </Router>
 
 
+        <div>
+          <h3>Details of Selected Movie from Library</h3>
+          <p>Movie: {this.state.selectedMovie.title}, release date: {this.state.selectedMovie.release_date}</p>
+          <p>Overview: {this.state.selectedMovie.overview}</p>
+          <img src = {this.state.selectedMovie.image_url} alt="alt"/>
+        </div>
+     
        
       </div>
     );
