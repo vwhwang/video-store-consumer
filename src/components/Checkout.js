@@ -6,39 +6,48 @@ const axios = require('axios');
 
 const Checkout = (props) => {
 
-  const [checkoutMovie,setCheckoutMovie] = useState({});
-  const [checkoutCustomer,setCheckoutCustomer] = useState({});
+  const [CustomerAndMovie,setCustomerAndMovie] = useState({
+    movie: '',
+    customer: ''
+  });
 
   const onSubmitCheckout = (event) => {
     event.preventDefault();
-    setCheckoutMovie(props.movie);
-    setCheckoutCustomer(props.customer.id);
-    console.log(checkoutCustomer);
-    console.log(props.movie);
+
+    setCustomerAndMovie({
+      movie: props.movie,
+      customer: props.customer
+    });
+
   }
 
 
   useEffect(() => {
-    
-    axios.post(BASE_URL + checkoutMovie + "/check-out",{
-      customer_id: checkoutCustomer,
-      due_date: Date.today + 7 
+
+    let new_due_date = new Date;
+    new_due_date.setDate(new_due_date.getDate() + 7 );
+
+    axios.post(BASE_URL + CustomerAndMovie.movie + "/check-out", {
+      
+        customer_id:CustomerAndMovie.customer,
+        due_date: new_due_date,
+
     })
 
       .then((response) => {
-        // setMovies(response.data);
-        console.log(response.data);
+
+        console.log("Successfully Checked Out Movie" + CustomerAndMovie.movie);
       })
       .catch((error)=>{
-        console.log("error no customers selected!")
+        console.log("FAILED ON API CALL")
       });
       ;
 
-  }, [checkoutMovie,checkoutCustomer]);
+  }, [CustomerAndMovie]);
 
 
 
-  // console.log(props.movie);
+
 
   return <button onClick = {onSubmitCheckout}>
     Check Out
