@@ -44,7 +44,7 @@ class App extends Component {
     
         <Router>
           <nav>
-            <ul>
+            <ul className="App-list-style">
               <li>
                 <Link to="/">Home</Link>
               </li>
