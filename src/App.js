@@ -105,13 +105,13 @@ class App extends Component {
           <p>Customer: {this.state.selectedCustomer.name}, Registered At: {this.state.selectedCustomer.registered_at}</p>
           <h3>Customer Details:</h3>
           <ul>
-            <li>Address: {this.state.selectedCustomer.address}</li>
-            <li>City: {this.state.selectedCustomer.city}</li>
-            <li>State: {this.state.selectedCustomer.state}</li>
-            <li>Postal Code: {this.state.selectedCustomer.postal_code}</li>
-            <li>Phone: {this.state.selectedCustomer.phone}</li>
-            <li>Account Credit: {this.state.selectedCustomer.account_credit}</li>
-            <li>Movies Checked Out: {this.state.selectedCustomer.movies_checked_out_count}</li>
+            <li className="App-list-style">Address: {this.state.selectedCustomer.address}</li>
+            <li className="App-list-style">City: {this.state.selectedCustomer.city}</li>
+            <li className="App-list-style">State: {this.state.selectedCustomer.state}</li>
+            <li className="App-list-style">Postal Code: {this.state.selectedCustomer.postal_code}</li>
+            <li className="App-list-style">Phone: {this.state.selectedCustomer.phone}</li>
+            <li className="App-list-style">Account Credit: {this.state.selectedCustomer.account_credit}</li>
+            <li className="App-list-style"li>Movies Checked Out: {this.state.selectedCustomer.movies_checked_out_count}</li>
           </ul>
         </div>
      
