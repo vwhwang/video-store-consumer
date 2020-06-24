@@ -32,8 +32,17 @@ const Search = (props) => {
   }, [submission.title]);
 
 
+
+  // show search movie details 
+  const [searchDetail, setSearchDetail] = useState([]);
+
+  const onClickDetails = () => {
+    setSearchDetail("hello");
+
+  } 
+
   const generateSearches = searchResult.map((search)=> {
-    return <Movie key={search.id} movie={search} onClickCallBack={console.log}/>
+    return <Movie key={search.id} movie={search} onClickCallBack={onClickDetails}/>
   })
 
   return <div>
@@ -48,7 +57,9 @@ const Search = (props) => {
 
     </form>
     <h4>Results</h4>
-  {generateSearches}
+      {generateSearches}
+    <h6>Searched Movie Details:</h6>
+{searchDetail}
 </div>
 
 }
