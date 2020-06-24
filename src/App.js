@@ -92,9 +92,24 @@ class App extends Component {
 
         <div>
           <h3>Details of Selected Movie from Library</h3>
-          <p>Movie: {this.state.selectedMovie.title}, release date: {this.state.selectedMovie.release_date}</p>
+          <p>Movie: {this.state.selectedMovie.title}, Release Date: {this.state.selectedMovie.release_date}</p>
           <p>Overview: {this.state.selectedMovie.overview}</p>
           <img src = {this.state.selectedMovie.image_url} alt="alt"/>
+        </div>
+
+        <div>
+          <h3>Selected Customer</h3>
+          <p>Customer: {this.state.selectedCustomer.name}, Registered At: {this.state.selectedCustomer.registered_at}</p>
+          <h3>Customer Details:</h3>
+          <ul>
+            <li>Address: {this.state.selectedCustomer.address}</li>
+            <li>City: {this.state.selectedCustomer.city}</li>
+            <li>State: {this.state.selectedCustomer.state}</li>
+            <li>Postal Code: {this.state.selectedCustomer.postal_code}</li>
+            <li>Phone: {this.state.selectedCustomer.phone}</li>
+            <li>Account Credit: {this.state.selectedCustomer.account_credit}</li>
+            <li>Movies Checked Out: {this.state.selectedCustomer.movies_checked_out_count}</li>
+          </ul>
         </div>
      
        

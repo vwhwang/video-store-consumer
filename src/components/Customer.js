@@ -5,6 +5,7 @@ const Customer = (props) => {
 
   const onCustomerClick =() => {
     props.setSelectedCustomerCallBack(props.customer);
+    console.log(props.customer);
   }
 
   return <button onClick = {onCustomerClick}>
