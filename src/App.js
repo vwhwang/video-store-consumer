@@ -71,13 +71,6 @@ class App extends Component {
             </ul>
           </nav>
 
-          <div className="logo">
-
-          <img src={vickiPic} alt="girl in red sunglasses"></img>
-
-          <img src={charlottePic} alt="girl in purple sunglasses"></img>
-
-          </div>
 
 
 
@@ -93,7 +86,15 @@ class App extends Component {
           
           <Switch>
             <Route exact path="/">
-              {/* we can add our photo here */}
+            {/* we can add our photo here */}
+
+          <div className="logo">
+
+            <img src={vickiPic} alt="girl in red sunglasses"></img>
+
+            <img src={charlottePic} alt="girl in purple sunglasses"></img>
+
+          </div>
             </Route>
 
             <Route path="/library">
