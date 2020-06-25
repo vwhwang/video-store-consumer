@@ -21,8 +21,9 @@
   padding: 10px ;
 }
 
-.App-selected-customer-container {
-  background-color: pink;
+.App-clear-selected {
+  padding: 5px;
+  margin-bottom: 5px;
 }
 
 .App-selected-customer-title {
@@ -65,4 +66,21 @@
 
 .App-nav-link:not(.active):hover {
   color: purple;
+}
+
+
+
+.App-selections {
+  display: inline-block;
+  border-top: dashed;
+}
+
+.App-selected {
+  float: left;
+  width: 50%;
+}
+
+.logo img {
+  width: 850px;
+  padding:25px;
 }

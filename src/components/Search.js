@@ -9,30 +9,28 @@ const axios = require('axios');
 
 const Search = (props) => {
 
-  const [searchTerm, setSearchTerm] = useState({});
-  const [submission,setSubmission] = useState({});
+  const [searchTerm, setSearchTerm] = useState("");
+  const [submission,setSubmission] = useState("");
   const [searchResult, setResult] = useState([]);
 
   const onInputChange = (event) => {
-    console.log(event.target.value);
-    const newFormFields = {
-      ...submission
-    };
-    newFormFields[event.target.name] = event.target.value;
-    setSearchTerm(newFormFields);
+    let title = [event.target.name] = event.target.value;
+    setSearchTerm(title);
   };
 
   const onSubmit =(event) => {
+
     event.preventDefault();
-    setSubmission(searchTerm)
+    setSubmission(searchTerm);
+
   };
 
   useEffect(() => {
-    axios.get(BASE_URL + submission.title)
+    axios.get(BASE_URL + submission)
       .then((response) => {
         setResult(response.data);
       });
-  }, [submission.title]);
+  }, [submission]);
 
 
 
@@ -42,7 +40,7 @@ const Search = (props) => {
   const onClickDetails = (movie) => {
     setSearchDetail(movie);
 
-  } 
+  }
 
   const generateSearches = searchResult.map((search)=> {
     return <Movie key={search.id} movie={search} onClickCallBack={onClickDetails}/>
@@ -53,7 +51,7 @@ const Search = (props) => {
       <input type="text"  onChange={onInputChange} 
        name="title"
             placeholder="Search movie title"
-            value={submission.title}/>
+            value={searchTerm}/>
       <div >
           <input type="submit" value="Submit Movie Search" />
       </div>
@@ -63,7 +61,6 @@ const Search = (props) => {
 
     {generateSearches}
 
-    <h6>Searched Movie Details:</h6>
     <SearchDetail movie = {searchDetail}/>
     <AddMovie movie ={searchDetail}/>
 </div>
@@ -72,6 +69,4 @@ const Search = (props) => {
 
 export default Search;
 
-// {  searchResult && (<h4>Results</h4>
-//   {generateSearches})}
 

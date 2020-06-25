@@ -4,9 +4,9 @@ import CustomerList from './components/CustomerList';
 import Search from './components/Search';
 import Checkout from './components/Checkout';
 import Return from './components/Return';
+import moment from 'moment';
 import './App.css';
-import vickiPic from "./images/vicki.PNG";
-import charlottePic from "./images/char.PNG";
+import charvic from "./images/char_vic_v2.jpg";
 
 
 
@@ -38,6 +38,10 @@ class App extends Component {
     this.setState({selectedCustomer:customer})
   }
 
+  onClearSelection() {
+    this.setState({selectedMovie:{}})  
+    this.setState({selectedCustomer:{}})
+  }
 
 
 
@@ -66,19 +70,14 @@ class App extends Component {
             </ul>
           </nav>
 
-          <div className="logo">
-
-          <img src={vickiPic} alt="girl in red sunglasses"></img>
-
-          <img src={charlottePic} alt="girl in purple sunglasses"></img>
-
-          </div>
 
 
 
+   
           <div className="CheckoutReturn">
             <Checkout movie = {this.state.selectedMovie.title} customer = {this.state.selectedCustomer} />
             <Return movie = {this.state.selectedMovie.title} customer = {this.state.selectedCustomer} />
+            <button className="App-clear-selected" onClick = {this.onClearSelection.bind(this)}>Clear Selected Movie and Customer</button>
             <p > {this.state.selectedMovie.title}</p>
             <p > {this.state.selectedCustomer.name}</p>
           </div>
@@ -86,7 +85,11 @@ class App extends Component {
           
           <Switch>
             <Route exact path="/">
-              {/* we can add our photo here */}
+            {/* we can add our photo here */}
+
+          <div className="logo">
+            <img src={charvic} alt="girl in red and purple sunglasses"></img>
+          </div>
             </Route>
 
             <Route path="/library">
@@ -105,27 +108,29 @@ class App extends Component {
 
         </Router>
 
+        <div className = "App-selections">
+          
+          <div className = "App-selected">
+            <SearchDetail movie={this.state.selectedMovie}/>
+          </div>
+       
+          {this.state.selectedCustomer.name && (
+          <div className="App-selected-customer-container App-selected ">
+            <h3 className="App-customer-detail-title">Customer Details:</h3>
+            <p><span className="App-customer-detail">Name:</span> {this.state.selectedCustomer.name},  <span className="App-customer-detail">Registered At: </span> {moment(this.state.selectedCustomer.registered_at).format('LL') }</p>
 
-        <div>
-          <SearchDetail movie={this.state.selectedMovie}/>
+            <ul>
+              <li className="App-list-style"><span className="App-customer-detail">Address: </span> {this.state.selectedCustomer.address}</li>
+              <li className="App-list-style"><span className="App-customer-detail">City: </span> {this.state.selectedCustomer.city}</li>
+              <li className="App-list-style"><span className="App-customer-detail">State: </span> {this.state.selectedCustomer.state}</li>
+              <li className="App-list-style"><span className="App-customer-detail">Postal Code: </span> {this.state.selectedCustomer.postal_code}</li>
+              <li className="App-list-style"><span className="App-customer-detail">Phone: </span>Phone: {this.state.selectedCustomer.phone}</li>
+              <li className="App-list-style"><span className="App-customer-detail">Account Credit: </span> {this.state.selectedCustomer.account_credit}</li>
+              <li className="App-list-style"><span className="App-customer-detail">Movies Checked Out: </span> {this.state.selectedCustomer.movies_checked_out_count}</li>
+            </ul>
+          </div>) }
+      
         </div>
-        {/* hide customer */}
-        {this.state.selectedCustomer.name && (
-        <div className="App-selected-customer-container">
-          <h3 className="App-customer-detail-title">Customer Details:</h3>
-          <p><span className="App-customer-detail">Name:</span> {this.state.selectedCustomer.name},  <span className="App-customer-detail">Registered At: </span> {this.state.selectedCustomer.registered_at}</p>
-
-          <ul>
-            <li className="App-list-style"><span className="App-customer-detail">Address: </span> {this.state.selectedCustomer.address}</li>
-            <li className="App-list-style"><span className="App-customer-detail">City: </span> {this.state.selectedCustomer.city}</li>
-            <li className="App-list-style"><span className="App-customer-detail">State: </span> {this.state.selectedCustomer.state}</li>
-            <li className="App-list-style"><span className="App-customer-detail">Postal Code: </span> {this.state.selectedCustomer.postal_code}</li>
-            <li className="App-list-style"><span className="App-customer-detail">Phone: </span>Phone: {this.state.selectedCustomer.phone}</li>
-            <li className="App-list-style"><span className="App-customer-detail">Account Credit: </span> {this.state.selectedCustomer.account_credit}</li>
-            <li className="App-list-style"><span className="App-customer-detail">Movies Checked Out: </span> {this.state.selectedCustomer.movies_checked_out_count}</li>
-          </ul>
-        </div>) }
-        
      
        
       </div>
