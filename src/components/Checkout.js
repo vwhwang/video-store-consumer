@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import './Checkout.css';
+import moment from 'moment';
 
 const BASE_URL = 'http://localhost:3000/rentals/';
 
@@ -39,10 +40,11 @@ const Checkout = (props) => {
     })
 
       .then((response) => {
-        setCheckoutMessage(props.customer.name + " checked out: " + CustomerAndMovie.movie +"!" + " Due Date " + new_due_date );
+        setCheckoutMessage(props.customer.name + " checked out: " + CustomerAndMovie.movie +"!" + " Due Date " + moment(new_due_date).format('LL') );
         console.log("Successfully Checked Out Movie" + CustomerAndMovie.movie);
       })
       .catch((error)=>{
+        // alert("Must select movie and customer.");
         console.log("FAILED ON API CALL")
       });
       ;

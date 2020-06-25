@@ -4,6 +4,7 @@ import CustomerList from './components/CustomerList';
 import Search from './components/Search';
 import Checkout from './components/Checkout';
 import Return from './components/Return';
+import moment from 'moment';
 import './App.css';
 
 import {
@@ -103,7 +104,7 @@ class App extends Component {
         {this.state.selectedCustomer.name && (
         <div className="App-selected-customer-container">
           <h3 className="App-customer-detail-title">Customer Details:</h3>
-          <p><span className="App-customer-detail">Name:</span> {this.state.selectedCustomer.name},  <span className="App-customer-detail">Registered At: </span> {this.state.selectedCustomer.registered_at}</p>
+          <p><span className="App-customer-detail">Name:</span> {this.state.selectedCustomer.name},  <span className="App-customer-detail">Registered At: </span> {moment(this.state.selectedCustomer.registered_at).format('LL') }</p>
 
           <ul>
             <li className="App-list-style"><span className="App-customer-detail">Address: </span> {this.state.selectedCustomer.address}</li>
