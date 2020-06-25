@@ -44,18 +44,18 @@ class App extends Component {
     
         <Router>
           <nav>
-            <ul className="App-list-style">
-              <li>
-                <Link to="/">Home</Link>
+            <ul>
+              <li className="App-nav-link-container">
+                <Link className="App-nav-link" to="/">Home</Link>
               </li>
-              <li>
-                <Link to="/library">Library</Link>
+              <li className="App-nav-link-container">
+                <Link className="App-nav-link"  to="/library">Library</Link>
               </li>
-              <li>
-                <Link to="/search">Search</Link>
+              <li className="App-nav-link-container">
+                <Link className="App-nav-link"  to="/search">Search</Link>
               </li>
-              <li>
-                <Link to="/customers">Customers</Link>
+              <li className="App-nav-link-container">
+                <Link className="App-nav-link"  to="/customers">Customers</Link>
               </li>
             </ul>
           </nav>
