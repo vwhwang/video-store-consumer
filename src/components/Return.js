@@ -41,12 +41,8 @@ const Return = (props) => {
         console.log(response.data);
       })
       .catch((error)=>{
-        // not sure how to show error message
-        // if (error.response.data.errors !== undefined){
-        //   console.log(error.response.data.errors.rental[0]);
-        //   setReturnMessage(error.response.data.errors.rental[0]);
-        // };
-          
+
+        // alert(JSON.stringify(error.response.data.errors));
         console.log(error.response.data.errors);
         console.log("FAILED ON API CALL")
       });
