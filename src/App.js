@@ -61,7 +61,7 @@ class App extends Component {
           </nav>
 
 
-          <div className="CheckouReturn">
+          <div className="CheckoutReturn">
             <Checkout movie = {this.state.selectedMovie.title} customer = {this.state.selectedCustomer} />
             <Return movie = {this.state.selectedMovie.title} customer = {this.state.selectedCustomer} />
             <p > {this.state.selectedMovie.title}</p>
