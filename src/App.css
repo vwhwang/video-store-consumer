@@ -22,7 +22,7 @@
 }
 
 .App-selected-customer-container {
-  background-color: pink;
+  /* background-color: pink; */
 }
 
 .App-selected-customer-title {
@@ -65,4 +65,16 @@
 
 .App-nav-link:not(.active):hover {
   color: purple;
+}
+
+
+
+.App-selections {
+  display: inline-block;
+  border-top: dashed;
+}
+
+.App-selected {
+  float: left;
+  width: 50%;
 }
