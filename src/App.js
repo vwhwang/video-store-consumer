@@ -6,6 +6,12 @@ import Checkout from './components/Checkout';
 import Return from './components/Return';
 import moment from 'moment';
 import './App.css';
+import vickiPic from "./images/vicki.PNG";
+import charlottePic from "./images/char.PNG";
+
+
+
+
 
 import {
   BrowserRouter as Router,
@@ -64,6 +70,15 @@ class App extends Component {
               </li>
             </ul>
           </nav>
+
+          <div className="logo">
+
+          <img src={vickiPic} alt="girl in red sunglasses"></img>
+
+          <img src={charlottePic} alt="girl in purple sunglasses"></img>
+
+          </div>
+
 
 
    
