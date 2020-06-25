@@ -60,11 +60,13 @@ class App extends Component {
             </ul>
           </nav>
 
-          <h6>Checkout Place Holder</h6>
-          <Checkout movie = {this.state.selectedMovie.title} customer = {this.state.selectedCustomer} />
-          <Return movie = {this.state.selectedMovie.title} customer = {this.state.selectedCustomer} />
-          <p> {this.state.selectedMovie.title}</p>
-          <p> {this.state.selectedCustomer.name}</p>
+
+          <div className="CheckouReturn">
+            <Checkout movie = {this.state.selectedMovie.title} customer = {this.state.selectedCustomer} />
+            <Return movie = {this.state.selectedMovie.title} customer = {this.state.selectedCustomer} />
+            <p > {this.state.selectedMovie.title}</p>
+            <p > {this.state.selectedCustomer.name}</p>
+          </div>
 
           
           <Switch>
