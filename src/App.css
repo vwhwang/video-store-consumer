@@ -78,3 +78,8 @@
   float: left;
   width: 50%;
 }
+
+.logo img {
+  width: 850px;
+  padding:25px;
+}
