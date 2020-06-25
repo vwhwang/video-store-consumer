@@ -32,6 +32,18 @@
   background-color: pink;
 }
 
+.App-selected-customer-title {
+  margin-top: 5px;
+}
+
+.App-customer-detail-title {
+  padding: 25px;
+}
+
+.App-customer-detail {
+  font-weight: bold;
+}
+
 .CheckoutReturn {
   background-color: plum;
 }

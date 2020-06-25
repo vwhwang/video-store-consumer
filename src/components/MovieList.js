@@ -27,6 +27,7 @@ const MovieList = (props) => {
 
 
   return <div className="MovieList">
+    <h3>Movie List:</h3>
     {generateMovies}
   </div>
 

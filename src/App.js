@@ -97,17 +97,18 @@ class App extends Component {
         {/* hide customer */}
         {this.state.selectedCustomer.name && (
         <div className="App-selected-customer-container">
-          <h3>Selected Customer</h3>
-          <p>Customer: {this.state.selectedCustomer.name}, Registered At: {this.state.selectedCustomer.registered_at}</p>
-          <h3>Customer Details:</h3>
+          {/* <h3 className="App-selected-customer-title">Selected Customer</h3> */}
+          <h3 className="App-customer-detail-title">Customer Details:</h3>
+          <p><span className="App-customer-detail">Name:</span> {this.state.selectedCustomer.name}  <span className="App-customer-detail">Registered At: </span> {this.state.selectedCustomer.registered_at}</p>
+
           <ul>
-            <li className="App-list-style">Address: {this.state.selectedCustomer.address}</li>
-            <li className="App-list-style">City: {this.state.selectedCustomer.city}</li>
-            <li className="App-list-style">State: {this.state.selectedCustomer.state}</li>
-            <li className="App-list-style">Postal Code: {this.state.selectedCustomer.postal_code}</li>
-            <li className="App-list-style">Phone: {this.state.selectedCustomer.phone}</li>
-            <li className="App-list-style">Account Credit: {this.state.selectedCustomer.account_credit}</li>
-            <li className="App-list-style"li>Movies Checked Out: {this.state.selectedCustomer.movies_checked_out_count}</li>
+            <li className="App-list-style"><span className="App-customer-detail">Address: </span> {this.state.selectedCustomer.address}</li>
+            <li className="App-list-style"><span className="App-customer-detail">City: </span> {this.state.selectedCustomer.city}</li>
+            <li className="App-list-style"><span className="App-customer-detail">State: </span> {this.state.selectedCustomer.state}</li>
+            <li className="App-list-style"><span className="App-customer-detail">Postal Code: </span> {this.state.selectedCustomer.postal_code}</li>
+            <li className="App-list-style"><span className="App-customer-detail">Phone: </span>Phone: {this.state.selectedCustomer.phone}</li>
+            <li className="App-list-style"><span className="App-customer-detail">Account Credit: </span> {this.state.selectedCustomer.account_credit}</li>
+            <li className="App-list-style"><span className="App-customer-detail">Movies Checked Out: </span> {this.state.selectedCustomer.movies_checked_out_count}</li>
           </ul>
         </div>) }
         

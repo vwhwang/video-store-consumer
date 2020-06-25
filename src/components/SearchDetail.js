@@ -9,8 +9,8 @@ const SearchDetail = (props) => {
 
   return <div className="Search-detail-movie-container">
     <h3>Movie Details:</h3>
-      <p>Movie: {props.movie.title}, Release Date: {props.movie.release_date}</p>
-      <p>Overview: {props.movie.overview}</p>
+      <p><span className="Search-detail-movie-details">Movie: </span>{props.movie.title}, <span className="Search-detail-movie-details">Release Date: </span>{props.movie.release_date}</p>
+      <p><span className="Search-detail-movie-details">Overview: </span> {props.movie.overview}</p>
       <img src = {props.movie.image_url} alt="alt"/>
   </div>
 } ;

@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Customer.css';
+
 
 const Customer = (props) => {
 
@@ -8,7 +10,7 @@ const Customer = (props) => {
     console.log(props.customer);
   }
 
-  return <button onClick = {onCustomerClick}>
+  return <button className="Customer-name-button" onClick = {onCustomerClick}>
     {props.customer.name}
   </button>
 

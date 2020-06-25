@@ -54,7 +54,7 @@ const Checkout = (props) => {
 
 
   return <span>
-    <button id="leftWrapper" className="Checkout-checkIn-checkOut" onClick = {onSubmitCheckout}>
+    <button className="Checkout-checkIn-checkOut" onClick = {onSubmitCheckout}>
     Check Out Movie
     </button>
     <p>{CheckoutMessage}</p>

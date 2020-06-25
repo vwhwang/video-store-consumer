@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Movie.css';
+
 
 const Movie = (props) => {
 
@@ -10,12 +12,10 @@ const Movie = (props) => {
 
   // display movie details 
 
-  return <button onClick = {onMovieClick}>
+  return <button className="Movie-name-button" onClick = {onMovieClick}>
     {props.movie.title}
   </button>
-
   
-
 }
 
 Movie.propTypes = {
