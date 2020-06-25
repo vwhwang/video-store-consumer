@@ -99,7 +99,7 @@ class App extends Component {
         <div className="App-selected-customer-container">
           {/* <h3 className="App-selected-customer-title">Selected Customer</h3> */}
           <h3 className="App-customer-detail-title">Customer Details:</h3>
-          <p><span className="App-customer-detail">Name:</span> {this.state.selectedCustomer.name}  <span className="App-customer-detail">Registered At: </span> {this.state.selectedCustomer.registered_at}</p>
+          <p><span className="App-customer-detail">Name:</span> {this.state.selectedCustomer.name},  <span className="App-customer-detail">Registered At: </span> {this.state.selectedCustomer.registered_at}</p>
 
           <ul>
             <li className="App-list-style"><span className="App-customer-detail">Address: </span> {this.state.selectedCustomer.address}</li>
