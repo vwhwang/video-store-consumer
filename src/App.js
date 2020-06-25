@@ -6,8 +6,8 @@ import Checkout from './components/Checkout';
 import Return from './components/Return';
 import moment from 'moment';
 import './App.css';
-import vickiPic from "./images/vicki.PNG";
-import charlottePic from "./images/char.PNG";
+import vickiPic from "./images/vicki.jpg";
+import charlottePic from "./images/char.png";
 
 
 
@@ -89,8 +89,7 @@ class App extends Component {
             {/* we can add our photo here */}
 
           <div className="logo">
-
-            <img src={vickiPic} alt="girl in red sunglasses"></img>
+            <img src={vickiPic} alt="girl in red sunglasses"></img> 
 
             <img src={charlottePic} alt="girl in purple sunglasses"></img>
 
