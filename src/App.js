@@ -68,7 +68,6 @@ class App extends Component {
           <div className="CheckoutReturn">
             <Checkout movie = {this.state.selectedMovie.title} customer = {this.state.selectedCustomer} />
             <Return movie = {this.state.selectedMovie.title} customer = {this.state.selectedCustomer} />
-            <h3>Place Holder </h3>
             <button onClick = {this.onClearSelection.bind(this)}>Clear Selected Movie and Customer</button>
             <p > {this.state.selectedMovie.title}</p>
             <p > {this.state.selectedCustomer.name}</p>
