@@ -55,7 +55,7 @@ const Return = (props) => {
 
 
   return <span>
-    <button className="Return-checkIn-checkOut"  onClick = {onSubmitReturn}>
+    <button className="Return-checkIn-checkOut MainButton"  onClick = {onSubmitReturn}>
     Return Movie
     </button>
     <p>{ReturnMessage}</p>

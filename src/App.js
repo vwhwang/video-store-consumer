@@ -77,7 +77,7 @@ class App extends Component {
           <div className="CheckoutReturn">
             <Checkout movie = {this.state.selectedMovie.title} customer = {this.state.selectedCustomer} />
             <Return movie = {this.state.selectedMovie.title} customer = {this.state.selectedCustomer} />
-            <button className="App-clear-selected" onClick = {this.onClearSelection.bind(this)}>Clear Selected Movie and Customer</button>
+            <button className="MainButton" onClick = {this.onClearSelection.bind(this)}>Clear Movie/Customer</button>
             <p > {this.state.selectedMovie.title}</p>
             <p > {this.state.selectedCustomer.name}</p>
           </div>
