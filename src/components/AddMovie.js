@@ -40,10 +40,10 @@ const AddMovie= (props) => {
   }, [AddedMovie]);
 
 
-
-  return <button onClick = {onSubmitAdd}>
+  return <button onClick = {onSubmitAdd} className ="MainButton" id="Hotpink" >
     Add Movie to Library
   </button>
+  
 
 
 } ;

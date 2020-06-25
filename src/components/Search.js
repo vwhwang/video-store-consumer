@@ -48,12 +48,12 @@ const Search = (props) => {
 
   return <div className="Search">
     <form onSubmit={onSubmit}>
-      <input type="text"  onChange={onInputChange} 
+      <input className= "Searchbar" type="text"  onChange={onInputChange} 
        name="title"
             placeholder="Search movie title"
             value={searchTerm}/>
       <div >
-          <input type="submit" value="Submit Movie Search" />
+          <input type="submit" value="Submit Movie Search" className="MainButton" />
       </div>
 
     </form>
