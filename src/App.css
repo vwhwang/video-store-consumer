@@ -28,13 +28,17 @@
   padding: 10px ;
 }
 
+.App-selected-customer-container {
+  background-color: pink;
+}
+
 .CheckoutReturn {
   background-color: plum;
 }
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
-}
+} */
 /* remove right border from Customers link on nav bar */
 .App-nav-link-container:last-of-type {
   padding-right: 0;

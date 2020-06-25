@@ -96,7 +96,7 @@ class App extends Component {
         </div>
         {/* hide customer */}
         {this.state.selectedCustomer.name && (
-        <div>
+        <div className="App-selected-customer-container">
           <h3>Selected Customer</h3>
           <p>Customer: {this.state.selectedCustomer.name}, Registered At: {this.state.selectedCustomer.registered_at}</p>
           <h3>Customer Details:</h3>
