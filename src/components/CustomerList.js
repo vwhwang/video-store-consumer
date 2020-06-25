@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import Customer from './Customer';
 import './CustomerList.css';
-const BASE_URL = 'http://localhost:3000/customers/';
+const BASE_URL = 'https://moviestar13.herokuapp.com/customers/';
 const axios = require('axios');
 
 const CustomerList = (props) => {

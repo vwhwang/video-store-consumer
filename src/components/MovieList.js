@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import Movie from './Movie';
 import './MovieList.css';
-const BASE_URL = 'http://localhost:3000/movies/';
+const BASE_URL = 'https://moviestar13.herokuapp.com/movies/';
 const axios = require('axios');
 
 const MovieList = (props) => {

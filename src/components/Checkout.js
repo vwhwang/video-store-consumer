@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './Checkout.css';
 import moment from 'moment';
 
-const BASE_URL = 'http://localhost:3000/rentals/';
+const BASE_URL = 'https://moviestar13.herokuapp.com/rentals/';
 
 const axios = require('axios');
 

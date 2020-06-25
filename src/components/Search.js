@@ -4,7 +4,7 @@ import Movie from './Movie';
 import AddMovie from './AddMovie';
 import SearchDetail from './SearchDetail';
 import './Search.css'
-const BASE_URL = 'http://localhost:3000/movies?query=';
+const BASE_URL = 'https://moviestar13.herokuapp.com/movies?query=';
 const axios = require('axios');
 
 const Search = (props) => {
