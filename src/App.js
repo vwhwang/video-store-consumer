@@ -6,7 +6,7 @@ import Checkout from './components/Checkout';
 import Return from './components/Return';
 import moment from 'moment';
 import './App.css';
-import charvic from "./images/char_vic_v3.jpg";
+import charvic from "./images/char_vic_v2.jpg";
 
 
 
