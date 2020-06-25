@@ -21,8 +21,9 @@
   padding: 10px ;
 }
 
-.App-selected-customer-container {
-  /* background-color: pink; */
+.App-clear-selected {
+  padding: 5px;
+  margin-bottom: 5px;
 }
 
 .App-selected-customer-title {

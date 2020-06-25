@@ -61,7 +61,6 @@ const Search = (props) => {
 
     {generateSearches}
 
-    <h6>Searched Movie Details:</h6>
     <SearchDetail movie = {searchDetail}/>
     <AddMovie movie ={searchDetail}/>
 </div>
