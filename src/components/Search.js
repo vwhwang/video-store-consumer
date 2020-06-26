@@ -62,7 +62,7 @@ const Search = (props) => {
     {generateSearches}
 
     <SearchDetail movie = {searchDetail}/>
-    <AddMovie movie ={searchDetail}/>
+    <AddMovie movie ={searchDetail} setDisplayMessage={props.setDisplayMessage}/>
 </div>
 
 }

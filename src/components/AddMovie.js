@@ -14,7 +14,9 @@ const AddMovie= (props) => {
   }
 
   useEffect(() => {
-
+    if (AddedMovie.title == undefined){
+      return ;
+    }
     axios.post(BASE_URL , {
         external_id: AddedMovie.external_id,
         title: AddedMovie.title, 
@@ -24,11 +26,12 @@ const AddMovie= (props) => {
     })
 
       .then((response) => {
+        props.setDisplayMessage({message:"Successfully Added Movie " + AddedMovie.title , severity: "success"});
         console.log("Successfully Added Movie: " + AddedMovie.title);
         console.log(response.data);
       })
       .catch((error)=>{
-
+        props.setDisplayMessage({message:"Failed to add movie " + AddedMovie.title , severity: "error"});
         console.log(error.response.data.errors);
         console.log("FAILED to add new movie to library!")
       });
@@ -40,6 +43,7 @@ const AddMovie= (props) => {
   return <button onClick = {onSubmitAdd} className ="MainButton" id="Hotpink" >
     Add Movie to Library
   </button>
+  
   
 
 
