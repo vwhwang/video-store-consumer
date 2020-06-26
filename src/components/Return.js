@@ -28,7 +28,9 @@ const Return = (props) => {
 
 
   useEffect(() => {
-
+    if (CustomerAndMovie.movie == "" ){
+      return ;
+    }
     axios.post(BASE_URL + CustomerAndMovie.movie + "/return", {
       
         customer_id:CustomerAndMovie.customer
@@ -37,12 +39,13 @@ const Return = (props) => {
 
       .then((response) => {
         setReturnMessage(props.customer.name + " returned " + CustomerAndMovie.movie +" !" );
+        props.setDisplayMessage({message: props.customer.name + " Successfully Returned Movie " + CustomerAndMovie.movie , severity: "success"});
         console.log("Successfully Returned Movie" + CustomerAndMovie.movie);
         console.log(response.data);
       })
       .catch((error)=>{
 
-        // alert(JSON.stringify(error.response.data.errors));
+        props.setDisplayMessage({message: "Failed to return movie", severity: "error"});
         console.log(error.response.data.errors);
         console.log("FAILED ON API CALL")
       });

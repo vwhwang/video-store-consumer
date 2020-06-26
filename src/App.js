@@ -8,6 +8,7 @@ import moment from 'moment';
 import './App.css';
 import charvic from "./images/char_vic_v2.jpg";
 
+import WithFlash from './components/WithFlash';
 
 import {MdLocalMovies,MdMovieFilter} from "react-icons/md";
 import { RiStarSmileLine } from "react-icons/ri";
@@ -27,6 +28,7 @@ class App extends Component {
     this.state = {
       selectedMovie: {},
       selectedCustomer: {},
+      displayMessage: null,
     };
   }
 
@@ -43,6 +45,10 @@ class App extends Component {
     this.setState({selectedCustomer:{}})
   }
 
+  setDisplayMessage(displayMessage) {
+    console.log("in setDisplayMessage\n"+displayMessage);
+    this.setState({displayMessage:displayMessage})
+  }
 
   render() {
     return (
@@ -69,13 +75,11 @@ class App extends Component {
             </ul>
           </nav>
 
+          < WithFlash displayMessage={this.state.displayMessage} />
 
-
-
-   
           <div className="CheckoutReturn">
-            <Checkout movie = {this.state.selectedMovie.title} customer = {this.state.selectedCustomer} />
-            <Return movie = {this.state.selectedMovie.title} customer = {this.state.selectedCustomer} />
+            <Checkout movie = {this.state.selectedMovie.title} customer = {this.state.selectedCustomer} setDisplayMessage={this.setDisplayMessage.bind(this)} />
+            <Return movie = {this.state.selectedMovie.title} customer = {this.state.selectedCustomer} setDisplayMessage={this.setDisplayMessage.bind(this)}/>
             <button className="MainButton" onClick = {this.onClearSelection.bind(this)}>Clear Movie/Customer</button>
             <p className = "ShowSelected">  <MdLocalMovies />  Movie: {this.state.selectedMovie.title}</p>
             <p className = "ShowSelected"> <RiStarSmileLine/> Customer: {this.state.selectedCustomer.name}</p>
@@ -95,7 +99,7 @@ class App extends Component {
             </Route>
 
             <Route path="/search">
-              <Search />
+              <Search setDisplayMessage={this.setDisplayMessage.bind(this)}/>
             </Route>
 
 

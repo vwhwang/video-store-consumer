@@ -29,6 +29,10 @@ const Checkout = (props) => {
 
   useEffect(() => {
 
+    if (CustomerAndMovie.movie == ""){
+      return ;
+    }
+
     let new_due_date = new Date;
     new_due_date.setDate(new_due_date.getDate() + 7 );
 
@@ -41,10 +45,11 @@ const Checkout = (props) => {
 
       .then((response) => {
         setCheckoutMessage(props.customer.name + " checked out: " + CustomerAndMovie.movie +"!" + " Due Date " + moment(new_due_date).format('LL') );
+        props.setDisplayMessage({message:props.customer.name + " Successfully Checked Out Movie " + CustomerAndMovie.movie , severity: "success"});
         console.log("Successfully Checked Out Movie" + CustomerAndMovie.movie);
       })
       .catch((error)=>{
-        // alert("Must select movie and customer.");
+        props.setDisplayMessage({message: "Failed to check out movie", severity: "error"});
         console.log("FAILED ON API CALL")
       });
       ;
