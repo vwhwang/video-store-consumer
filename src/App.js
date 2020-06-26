@@ -84,7 +84,7 @@ class App extends Component {
 
           
           <Switch>
-            <Route exact path="/">
+          <Route exact path={process.env.PUBLIC_URL + '/'}>
             {/* we can add our photo here */}
 
           <div className="logo">
@@ -92,7 +92,7 @@ class App extends Component {
           </div>
             </Route>
 
-            <Route path="/library">
+            <Route path={process.env.PUBLIC_URL + "/library"}>
               <MovieList setSelectedMovieCallBack = {this.setSelectedMovie.bind(this)} />
             </Route>
 
