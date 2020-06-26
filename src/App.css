@@ -124,9 +124,14 @@
 
 #Hotpink {
   box-shadow:inset 0px 1px 0px 0px hotpink;
-	background:linear-gradient(to bottom, hotpink 5%, hotpink 100%);
+	background:linear-gradient(to bottom, hotpink 5%, rgb(236, 77, 156) 100%);
 	background-color:hotpink;
 	border-radius:6px;
   border:1px solid hotpink;
   text-shadow:0px 1px 0px #9b14b3;
+}
+
+#Hotpink:hover {
+	background:linear-gradient(to bottom, rgb(236, 77, 156) 5%, hotpink 100%);
+	background-color:#a20dbd;
 }
