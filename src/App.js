@@ -9,6 +9,9 @@ import './App.css';
 import charvic from "./images/char_vic_v2.jpg";
 
 
+import {MdLocalMovies,MdMovieFilter} from "react-icons/md";
+import { RiStarSmileLine } from "react-icons/ri";
+
 import {
   HashRouter as Router,
   Switch,
@@ -74,8 +77,8 @@ class App extends Component {
             <Checkout movie = {this.state.selectedMovie.title} customer = {this.state.selectedCustomer} />
             <Return movie = {this.state.selectedMovie.title} customer = {this.state.selectedCustomer} />
             <button className="MainButton" onClick = {this.onClearSelection.bind(this)}>Clear Movie/Customer</button>
-            <p > {this.state.selectedMovie.title}</p>
-            <p > {this.state.selectedCustomer.name}</p>
+            <p className = "ShowSelected">  <MdLocalMovies />  Movie: {this.state.selectedMovie.title}</p>
+            <p className = "ShowSelected"> <RiStarSmileLine/> Customer: {this.state.selectedCustomer.name}</p>
           </div>
 
           

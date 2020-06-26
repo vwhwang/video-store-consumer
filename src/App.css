@@ -70,8 +70,10 @@
 
 
 .App-selections {
-  display: inline-block;
+  /* display: inline-block; */
   border-top: dashed;
+  padding:50px;
+  /* margin-left: 25px; */
 }
 
 .App-selected {
@@ -114,6 +116,10 @@
 .MainButton:active {
 	position:relative;
 	top:1px;
+}
+
+.ShowSelected {
+  font-size: 20px;
 }
 
 #Hotpink {
