@@ -13,7 +13,7 @@ import charvic from "./images/char_vic_v2.jpg";
 
 
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   Link
@@ -84,7 +84,7 @@ class App extends Component {
 
           
           <Switch>
-          <Route exact path={process.env.PUBLIC_URL + '/'}>
+          <Route exact path="/">
             {/* we can add our photo here */}
 
           <div className="logo">
@@ -92,7 +92,7 @@ class App extends Component {
           </div>
             </Route>
 
-            <Route path={process.env.PUBLIC_URL + "/library"}>
+            <Route path="/library">
               <MovieList setSelectedMovieCallBack = {this.setSelectedMovie.bind(this)} />
             </Route>
 
