@@ -9,9 +9,6 @@ import './App.css';
 import charvic from "./images/char_vic_v2.jpg";
 
 
-
-
-
 import {
   HashRouter as Router,
   Switch,
@@ -49,7 +46,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Video Consumer App</h1>
+          <h1 className="App-title">Movie Star Rentals</h1>
         </header>
     
         <Router>
@@ -84,13 +81,12 @@ class App extends Component {
 
           
           <Switch>
-          <Route exact path="/">
-            {/* we can add our photo here */}
 
-          <div className="logo">
-            <img src={charvic} alt="girl in red and purple sunglasses"></img>
-          </div>
-            </Route>
+          <Route exact path="/">
+            <div className="logo">
+              <img src={charvic} alt="girl in red and purple sunglasses"></img>
+            </div>
+          </Route>
 
             <Route path="/library">
               <MovieList setSelectedMovieCallBack = {this.setSelectedMovie.bind(this)} />

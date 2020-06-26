@@ -8,13 +8,10 @@ const AddMovie= (props) => {
 
   const [AddedMovie, setAddedMovie] = useState({});
 
-
   const onSubmitAdd = (event) => {
     event.preventDefault();
     setAddedMovie(props.movie);
-
   }
-
 
   useEffect(() => {
 
