@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7ef2027cb02ff0ed48369c59cf6f3117",
+    "revision": "0efa14cbb63d143bc4d64e558639245e",
     "url": "/video-store-consumer/index.html"
   },
   {
-    "revision": "0e3fc2a8a05041afba5e",
+    "revision": "4e501334046cfb741d6b",
     "url": "/video-store-consumer/static/css/main.5c304f92.chunk.css"
   },
   {
-    "revision": "e33f0b019fd78375fe88",
-    "url": "/video-store-consumer/static/js/2.93cb4e43.chunk.js"
+    "revision": "b742b1846d443d81d5a4",
+    "url": "/video-store-consumer/static/js/2.7d6ff859.chunk.js"
   },
   {
-    "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/video-store-consumer/static/js/2.93cb4e43.chunk.js.LICENSE.txt"
+    "revision": "0749163b59fbee32225059cb60c18af6",
+    "url": "/video-store-consumer/static/js/2.7d6ff859.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0e3fc2a8a05041afba5e",
-    "url": "/video-store-consumer/static/js/main.c356b667.chunk.js"
+    "revision": "4e501334046cfb741d6b",
+    "url": "/video-store-consumer/static/js/main.8f3e1f6a.chunk.js"
   },
   {
     "revision": "4cad2615cad4c20889c0",
